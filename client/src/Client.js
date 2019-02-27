@@ -1,6 +1,7 @@
 
+import { url } from './const'
 function search(query) {
-  return fetch(`/api/books?firstName=${query}`, {
+  return fetch(`${url}api/books?firstName=${query}`, {
     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON);
