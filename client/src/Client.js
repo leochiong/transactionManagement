@@ -2,6 +2,7 @@
 import { url } from './const'
 function search(query) {
   return fetch(`${url}api/books?firstName=${query}`, {
+    mode:'no-cors',
     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON);
